@@ -1,0 +1,55 @@
+.page-header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: $gray-lighter;
+
+  @media(min-width: $screen-md) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  &__container {
+    @include container();
+    display: grid;
+    position: relative;
+    grid-template-columns: 80% max-content;
+    justify-content: space-between;
+    grid-column-gap: 16px;
+
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: 50% max-content;
+
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: max-content max-content;
+    }
+  }
+
+  &__logo {
+    z-index: 2;
+  }
+
+  &__menu {
+    position: relative;
+    width: 100%;
+
+
+    @media (max-width: $screen-md - 1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    & .main-nav__list {
+      @media (max-width: $screen-md - 1) {
+        margin-top: rem(54);
+      }
+    }
+
+  }
+
+}

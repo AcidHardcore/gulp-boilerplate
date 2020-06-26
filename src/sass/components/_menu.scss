@@ -1,0 +1,27 @@
+.menu {
+
+  $block-name: &; // #{$block-name}__element
+
+  background-color: $text-color;
+
+
+  &__link {
+
+    display: block;
+    padding: rem(10) 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+      background-color: #fff;
+    }
+
+    &--active {
+      color: $color-main;
+      background-color: #fff;
+    }
+  }
+}
