@@ -1,0 +1,82 @@
+<form class="form">
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Название1</legend>
+
+    <label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" placeholder="Пример"
+                                                                          style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"><span
+        class="field-text__help-text">Подсказка</span></span></label>
+    <label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text"
+                                                                          placeholder="Пример"><span
+        class="field-text__help-text">Подсказка</span></span></label>
+  </fieldset>
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Название2</legend>
+
+    <label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" placeholder="Пример"><span
+        class="field-text__help-text">Подсказка</span></span></label>
+    <label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text"
+                                                                          placeholder="Пример"><span
+        class="field-text__help-text">Подсказка</span></span></label>
+  </fieldset>
+  <div class="field-actions">
+    <button class="btn  btn--primary">Отправить</button>
+  </div>
+</form>
+
+
+<form class="form blocks-library__row" data-check-form="true" _lpchecked="1">
+  <div class="blocks-library__col-1-2">
+    <label class="field-text field-text--error">
+      <span class="field-text__name">Имя</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="text" require="require" data-check-pattern="^[a-zа-яё]+.{2,}"
+               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><span
+          class="field-text__help-text">Имя юзера. Не менее 3-х символов. Обязательно.</span>
+      </span>
+    </label>
+  </div>
+  <div class="blocks-library__col-1-2">
+    <label class="field-text">
+      <span class="field-text__name">Фамилия</span>
+      <span class="field-text__input-wrap"><input class="field-text__input" type="text" data-check-pattern="^[a-zа-яё]+.+">
+        <span class="field-text__help-text">Фамилия. Не менее 2-х символов. Не обязательно.</span>
+      </span>
+    </label>
+  </div>
+  <div class="blocks-library__col-1-2">
+    <label class="field-text"><span class="field-text__name">Телефон</span><span class="field-text__input-wrap"><input class="field-text__input"
+                                                                                                                       type="tel"
+                                                                                                                       require="require"
+                                                                                                                       placeholder="+7 (000) 000-00-00"
+                                                                                                                       data-check-pattern="[\+]?\d?[\s|-]?[(]?\d{0,3}[)]?[\s|-]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}"><span
+        class="field-text__help-text">Обязательно.</span></span></label></div>
+  <div class="blocks-library__col-1-2">
+    <label class="field-text"><span class="field-text__name">Электромыло</span><span class="field-text__input-wrap"><input
+        class="field-text__input" type="email" require="require"
+        data-check-pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"><span
+        class="field-text__help-text">Обязательно.</span></span></label></div>
+  <div class="blocks-library__col-2-2">
+    <div class="field-checkbox">
+      <div class="field-checkbox__input-wrap">
+        <label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="checkCheck" data-check-state="on"><span
+            class="field-checkbox__name-text">Принимаю условия, передаю квартиру во владение Николаю.</span></label>
+        <div class="field-checkbox__help-text-wrap">
+          <div class="field-checkbox__help-text">Это шутка, чекбокс можно спокойно отмечать. Или же нет.</div>
+        </div>
+      </div>
+      <div class="field-checkbox__input-wrap">
+        <label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="checkOff" data-check-state="off"
+                                                   checked="checked"><span
+            class="field-checkbox__name-text">Должен. Быть. Неотмеченным.</span></label>
+        <div class="field-checkbox__help-text-wrap">
+          <div class="field-checkbox__help-text">Иначе всё — тлен!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blocks-library__col-2-2">
+    <div class="field-actions">
+      <button class="btn  btn--primary">Отправить</button>
+    </div>
+  </div>
+</form>
