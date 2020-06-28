@@ -15,14 +15,27 @@
 @import "components/menu";
 @import "components/video";
 @import "components/modal";
+@import "components/tabs";
+@import "components/off-canvas";
+@import "components/embed-responsive";
+@import "components/to-top";
+@import "components/divider";
+@import "components/table";
+@import "components/table-responsive";
 
-@import "components/top";
-@import "components/discover";
-@import "components/slider";
-@import "components/media";
-@import "components/patreon";
-@import "components/card";
-@import "components/animation";
+@import "components/form/form";
+@import "components/form/field-text";
+@import "components/form/field-checkbox";
+@import "components/form/field-radio";
+@import "components/form/field-actions";
+
+@import "components/cms/social";
+@import "components/cms/breadcrumbs";
+@import "components/cms/pagination";
+
+
+
+
 
 
 
