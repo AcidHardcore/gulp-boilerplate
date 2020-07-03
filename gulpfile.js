@@ -336,6 +336,7 @@ var reloadBrowser = function (done) {
 // Watch for changes
 var watchSource = function (done) {
   watch(paths.scripts.watchPath, series(exports.scripts, reloadBrowser));
+  watch(paths.libs.input, series(exports.copyJSLibs, reloadBrowser));
   watch(paths.styles.input, series(exports.styles, reloadBrowser));
   watch([paths.svgs.input, paths.images.input], series(exports.assets, reloadBrowser));
   watch(paths.copy.input, series(exports.copyFiles, reloadBrowser));
@@ -388,6 +389,9 @@ exports.assets = series(
 
 //Copy files
 exports.copyFiles = copyFiles;
+
+//Copy Libs
+exports.copyJSLibs = copyJSLibs;
 
 
 
