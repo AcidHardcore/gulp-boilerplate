@@ -226,9 +226,7 @@ var buildStyles = function (done) {
     .pipe(rename({suffix: '.min'}))
     .pipe(postcss([
       minify({
-        discardComments: {
-          removeAll: true
-        }
+        preset: ["default", { discardComments: { removeAll: true } }],
       })
     ]))
     .pipe(dest(paths.styles.output));
