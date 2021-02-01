@@ -1,5 +1,18 @@
 (function(){
 
+    // Добавление/удаление модификаторов при клике на переключение видимости
+    var toggler = document.getElementById('main-nav-toggler');
+    console.log(toggler, 'eeee');
+    if(toggler){
+        toggler.addEventListener('click', mainNavVisibleToggle);
+
+        function mainNavVisibleToggle(e) {
+            e.preventDefault();
+            toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
+            document.getElementById('main-nav').classList.toggle('main-nav--open');
+        }
+    }
+
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
   var linkClassName = 'main-nav__link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
@@ -76,4 +89,4 @@
 
   };
 
-});
+}());

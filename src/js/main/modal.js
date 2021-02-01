@@ -1,41 +1,44 @@
-(function(){
-  var modal = document.getElementById("video-modal");
+(function () {
+    var modal = document.getElementById("video-modal");
 
-  var btn = document.querySelector('.top__video');
+    if(!modal) return;
 
-  var close = modal.querySelector('.close');
+    var btn = document.querySelector('.top__video');
 
-  const stopVideo = function (element) {
-    const iframe = element.querySelector('iframe');
-    const video = element.querySelector('video');
+    var close = modal.querySelector('.close');
 
-    if (iframe) {
-      //remove autoplay
-      iframe.setAttribute('allow', '');
-      iframe.src = iframe.src.replace('&autoplay=1', '');
-    }
-    if (video) {
-      video.pause();
-    }
-  };
 
-btn.addEventListener('click', function(e){
-  e.preventDefault();
-  modal.classList.add('modal__show');
-});
+    const stopVideo = function (element) {
+        const iframe = element.querySelector('iframe');
+        const video = element.querySelector('video');
 
-close.addEventListener('click', function(e){
-  e.preventDefault();
-  modal.classList.remove('modal__show');
-  stopVideo(modal);
-});
+        if (iframe) {
+            //remove autoplay
+            iframe.setAttribute('allow', '');
+            iframe.src = iframe.src.replace('&autoplay=1', '');
+        }
+        if (video) {
+            video.pause();
+        }
+    };
 
-window.addEventListener('click', function (e) {
-  if (e.target === modal) {
-    modal.classList.remove('modal__show');
-    stopVideo(modal);
-  }
-});
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.add('modal__show');
+    });
+
+    close.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.remove('modal__show');
+        stopVideo(modal);
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.classList.remove('modal__show');
+            stopVideo(modal);
+        }
+    });
 
 
 }());
