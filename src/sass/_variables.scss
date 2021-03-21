@@ -1,0 +1,104 @@
+$black: hsl(0, 0%, 0%);
+$gray-100: hsl(0, 0%, 10%);
+$gray-200: hsl(0, 0%, 20%);
+$gray-300: hsl(0, 0%, 30%);
+$gray-400: hsl(0, 0%, 40%);
+$gray-500: hsl(0, 0%, 50%);
+$gray-600: hsl(0, 0%, 60%);
+$gray-700: hsl(0, 0%, 70%);
+$gray-800: hsl(0, 0%, 80%);
+$gray-900: hsl(0, 0%, 90%);
+$white: hsl(0, 0%, 100%);
+
+$color-main: hsl(208, 98%, 43%);
+$color-success: hsl(120, 39%, 54%);
+$color-danger: hsl(2, 64%, 58%);
+$color-warning: hsl(35, 84%, 62%);
+
+$color-vk: #4a76a8;
+$color-fb: #4267b2;
+$color-tw: #40a2f5;
+$color-gh: #24292e;
+
+$browser-context: 16;
+
+@import "mixins/px-to-rem";
+@import "mixins/px-to-em";
+@import "mixins/fluid-type";
+
+$text-color: $gray-100;
+$text-color-muted: $gray-500;
+$body-bg: $white;
+
+$link-color: $color-main;
+$link-color--hover: darken($color-main, 15%);
+
+$border-color: $gray-800;
+
+$font-size: rem(20);
+$font-size-h1: rem(54);
+$font-size-h2: rem(40);
+$font-size-h3: rem(32);
+$font-size-h4: rem(24);
+$font-size-h5: rem(22);
+$font-size-h6: rem(20);
+
+$font-size-mobile: rem(16);
+$font-size-h1-mobile: rem(40);
+$font-size-h2-mobile: rem(32);
+$font-size-h3-mobile: rem(24);
+$font-size-h4-mobile: rem(20);
+$font-size-h5-mobile: rem(18);
+$font-size-h6-mobile: rem(16);
+
+$font-scale-start: rem(600);
+$font-scale-end: rem(1440);
+
+
+$font-size-sm: 0.75em;
+
+$line-height: 1.5;
+
+$typo-margin-vertical: 1rem;
+
+$font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family--serif: 'Georgia', 'Times New Roman', 'Times', serif;
+$font-family--monospace: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+$font-family--headings: $font-family;
+
+
+$screen-xs: 0;
+$screen-sm: rem(480);
+$screen-md: rem(768);
+$screen-lg: rem(992);
+$screen-xl: rem(1200);
+$screen-xxl: rem(1440);
+$screen-xxxl: rem(1600);
+
+$container-sm: 100%;
+$container-md: 100%;
+$container-lg: ($screen-lg - 2rem);
+$container-xl: ($screen-xl - 4rem);
+$container-xxl: ($screen-xxl - rem(140));
+$container-xxxl: ($screen-xxl - rem(140));
+
+
+$grid-columns: 12;
+$grid-gutter-width: 2rem;
+
+$field-padding-vertical: .25rem;
+$field-padding-horizontal: .75rem;
+
+$border-radius: 3px;
+$opacity: 0.7;
+$transition-time: 0.3s;
+$shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+
+$menu-desktop-width: $screen-md;
+
+$toggler-part-height: 3px;
+$toggler-part-bg-color: $black;
+
+$z-index-modal: 100;
+
+$off-canvas-width: rem(250);

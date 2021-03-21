@@ -1,7 +1,7 @@
 .page {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-text-size-adjust: 100%; // stylelint-disable-line
+  -webkit-text-size-adjust: 100%;
   min-width: 320px;
   min-height: 100%;
 
@@ -31,13 +31,12 @@
 }
 
 body {
-  display: flex;           //  IE bug for min-height and flexbox (flex-direction:column)
-  flex-direction: column;  // and move footer to the bottom in IE 10-11
   margin: 0;
   min-height: 100%;
   word-break: break-word;
   font-family: $font-family;
-  font-size: $font-size;
+  //font-size: $font-size;
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-mobile, $font-size);
   line-height: $line-height;
   text-align: left;
   color: $text-color;
@@ -48,7 +47,7 @@ body {
 }
 
 [tabindex='-1']:focus {
-  outline: none !important; // stylelint-disable-line
+  outline: none !important;
 }
 
 [role='button'] {
@@ -56,7 +55,7 @@ body {
 }
 
 [type='search']::-webkit-search-decoration {
-  -webkit-appearance: none; // stylelint-disable-line
+  -webkit-appearance: none;
 }
 
 // area,
@@ -83,7 +82,7 @@ button,
 html [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button; // stylelint-disable-line
+  -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -99,25 +98,15 @@ input[type='date'],
 input[type='time'],
 input[type='datetime-local'],
 input[type='month'] {
-  -webkit-appearance: listbox; // stylelint-disable-line
+  -webkit-appearance: listbox;
 }
 
 textarea {
-  overflow: auto;   // IE.
   resize: vertical;
 }
 
 svg {
   fill: currentColor;
-
-  a &,
-  button & {
-    pointer-events: none; // Edge
-  }
-
-  &:not(:root) {
-    overflow: hidden; // IE
-  }
 }
 
 img {
@@ -135,26 +124,11 @@ a {
     color: $link-color--hover;
   }
 
-  // &:visited {
-  //   color: $link-color--hover;
-  // }
-
-  &[href^='tel:'] {
-
-    // make links as regular text on the big screens
-    @media (min-width: $screen-xl) {
-      white-space: nowrap;
-      pointer-events: none;
-      text-decoration: inherit;
-      color: inherit;
-    }
-  }
 }
 
 hr {
   box-sizing: content-box; // Firefox
-  height: 0;               // Firefox
-  overflow: visible;       // Edge и IE
+  height: 0; // Firefox
   margin-top: $typo-margin-vertical * 2;
   margin-bottom: $typo-margin-vertical * 2;
   border: 0;
@@ -168,19 +142,36 @@ h4,
 h5,
 h6 {
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   font-family: $font-family;
   font-weight: 700;
   line-height: 1.2;
   color: currentColor;
 }
 
-h1 { font-size: $font-size-h1; } // stylelint-disable-line
-h2 { font-size: $font-size-h2; } // stylelint-disable-line
-h3 { font-size: $font-size-h3; } // stylelint-disable-line
-h4 { font-size: $font-size-h4; } // stylelint-disable-line
-h5 { font-size: $font-size-h5; } // stylelint-disable-line
-h6 { font-size: $font-size-h6; } // stylelint-disable-line
+h1 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h1-mobile, $font-size-h1);
+}
+
+h2 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h2-mobile, $font-size-h2 );
+}
+
+h3 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h3-mobile, $font-size-h3 );
+}
+
+h4 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h4-mobile, $font-size-h4);
+}
+
+h5 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h5-mobile, $font-size-h5 );
+}
+
+h6 {
+  @include fluid-type($font-scale-start, $font-scale-end, $font-size-h6-mobile, $font-size-h6);
+}
 
 p,
 ul,
@@ -224,23 +215,23 @@ li {
   line-height: inherit;
 }
 
-// dt {
-//   font-weight: 700;
-// }
+ dt {
+   font-weight: 700;
+ }
 
-// dd {
-//   margin-left: 0;
+ dd {
+   margin-left: 0;
 
-//   @media (min-width: $screen-sm) {
-//     margin-left: 1.5rem;
-//   }
+   @media (min-width: $screen-sm) {
+     margin-left: 1.5rem;
+   }
 
-//   & + dt {
-//     margin-top: ($line-height / 2);
-//   }
-// }
+   & + dt {
+     margin-top: ($line-height / 2);
+   }
+ }
 
-// .small,
+.small,
 small {
   font-size: $font-size-sm;
 }
@@ -250,20 +241,16 @@ sup {
   font-size: $font-size-sm;
 }
 
-// .mark,
-// mark {
-//   background: rgba($color-warning, 0.3);
-//   padding: 0.1em 0.3em;
-// }
+.mark,
+mark {
+  background: rgba($color-warning, 0.3);
+  padding: 0.1em 0.3em;
+}
 
 b,
 strong {
   font-weight: bolder;
 }
-
-// abbr[title] {
-//   text-decoration: underline dotted;
-// }
 
 blockquote {
   padding: 0;
@@ -271,7 +258,6 @@ blockquote {
   margin-right: 0;
 }
 
-// samp,
 code,
 kbd,
 pre {
@@ -288,7 +274,7 @@ code {
 kbd {
   padding: 0.06em 0.3em;
   color: $text-color;
-  background-color: $gray-lightest;
+  background-color: $gray-900;
   border-radius: $border-radius;
 
   kbd {

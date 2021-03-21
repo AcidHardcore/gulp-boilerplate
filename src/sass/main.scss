@@ -1,37 +1,37 @@
-@import "base/variables";
-@import "base/fonts";
+@import "variables";
+@import "fonts";
 @import "mixins/mixins";
-@import "base/normilize";
-@import "base/typo";
-@import "base/page";
-@import "base/page-header";
-@import "base/page-footer";
+@import "normilize";
+@import "typo";
+@import "page";
+@import "page-header";
+@import "page-footer";
 
-@import "components/btn";
-@import "components/burger";
-@import "components/close";
-@import "components/logo";
-@import "components/main-nav";
-@import "components/menu";
-@import "components/video";
-@import "components/modal";
-@import "components/tabs";
-@import "components/off-canvas";
-@import "components/embed-responsive";
-@import "components/to-top";
-@import "components/divider";
-@import "components/table";
-@import "components/table-responsive";
+@import "btn";
+@import "burger";
+@import "close";
+@import "logo";
+@import "main-nav";
+@import "menu";
+@import "video";
+@import "modal";
+@import "tabs";
+@import "off-canvas";
+@import "embed-responsive";
+@import "to-top";
+@import "divider";
+@import "table";
+@import "table-responsive";
 
-@import "components/form/form";
-@import "components/form/field-text";
-@import "components/form/field-checkbox";
-@import "components/form/field-radio";
-@import "components/form/field-actions";
+@import "form";
+@import "field-text";
+@import "field-checkbox";
+@import "field-radio";
+@import "field-actions";
 
-@import "components/cms/social";
-@import "components/cms/breadcrumbs";
-@import "components/cms/pagination";
+@import "social";
+@import "breadcrumbs";
+@import "pagination";
 
 
 

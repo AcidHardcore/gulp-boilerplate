@@ -77,8 +77,8 @@
     }
 
     @at-root input:disabled ~ &:before {
-      border-color: $gray-light;
-      background: $gray-lighter;
+      border-color: $gray-600;
+      background: $gray-800;
     }
 
     &:after {
@@ -98,7 +98,7 @@
       }
 
       @at-root input:checked:disabled ~ & {
-        background-color: $gray-light;
+        background-color: $gray-600;
       }
     }
 

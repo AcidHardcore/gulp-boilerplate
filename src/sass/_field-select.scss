@@ -43,7 +43,7 @@
   //   &[disabled],
   //   &[readonly] {
   //     cursor: default;
-  //     background-color: $gray-lightest;
+  //     background-color: $gray-900;
   //   }
   // }
 
@@ -151,7 +151,7 @@
       cursor: pointer;
 
       &.is-highlighted {
-        background: $gray-lightest;
+        background: $gray-900;
       }
     }
   }
@@ -174,7 +174,7 @@
   &.is-disabled {
 
     #{$block-name}__inner {
-      background-color: $gray-lighter;
+      background-color: $gray-800;
       cursor: default;
     }
   }

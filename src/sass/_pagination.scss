@@ -31,7 +31,7 @@
 
       &:hover,
       &:focus {
-        background-color: $gray-lightest;
+        background-color: $gray-900;
       }
     }
 
@@ -40,7 +40,7 @@
     }
 
     &--active {
-      background-color: $gray-lightest;
+      background-color: $gray-900;
     }
   }
 }

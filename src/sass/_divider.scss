@@ -9,13 +9,13 @@
     content: '';
     flex-grow: 1;
     height: 1px;
-    background-color: $gray-light;
+    background-color: $gray-600;
   }
 
   &__inner {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-size: $font-size-sm;
-    color: $gray-light;
+    color: $gray-600;
   }
 }

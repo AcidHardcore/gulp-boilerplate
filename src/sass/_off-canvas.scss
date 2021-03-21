@@ -1,6 +1,6 @@
 
 
-$off-canvas-width:            250px !default;
+$off-canvas-width:            rem(250) !default;
 
 .off-canvas {
 
@@ -38,7 +38,7 @@ $off-canvas-width:            250px !default;
     max-height: 30vh;
     overflow-y: auto;
     backface-visibility: hidden;
-    background-color: $gray-darkest;
+    background-color: $gray-100;
     color: #fff;
     transition: transform $transition-time ease;
 
@@ -62,7 +62,7 @@ $off-canvas-width:            250px !default;
 
     &--separator {
       padding-bottom: 10px;
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid $gray-500;
       margin-bottom: 10px;
     }
   }
@@ -78,7 +78,7 @@ $off-canvas-width:            250px !default;
     &:focus {
       color: inherit;
       text-decoration: none;
-      background-color: $gray-darker;
+      background-color: $gray-200;
     }
   }
 
