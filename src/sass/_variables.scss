@@ -75,6 +75,16 @@ $screen-xl: rem(1200);
 $screen-xxl: rem(1440);
 $screen-xxxl: rem(1600);
 
+$grid-breakpoints: (
+        xs: 0,
+        sm: rem(576),
+        md: rem(768),
+        lg: rem(992),
+        xl: rem(1200),
+        xxl: rem(1440),
+        xxxl: rem(1600)
+);
+
 $container-sm: 100%;
 $container-md: 100%;
 $container-lg: ($screen-lg - 2rem);

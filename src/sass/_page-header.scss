@@ -17,12 +17,12 @@
     grid-column-gap: 16px;
 
 
-    @media (min-width: $screen-md) {
+    @include media-breakpoint-up(md) {
       grid-template-columns: 50% max-content;
 
     }
 
-    @media (min-width: $screen-lg) {
+    @include media-breakpoint-up(lg) {
       grid-template-columns: max-content max-content;
     }
   }
@@ -36,7 +36,7 @@
     width: 100%;
 
 
-    @media (max-width: $screen-md - 1) {
+    @include media-breakpoint-down(md) {
       position: absolute;
       top: 0;
       left: 0;
@@ -45,7 +45,7 @@
     }
 
     & .main-nav__list {
-      @media (max-width: $screen-md - 1) {
+      @include media-breakpoint-down(md) {
         margin-top: rem(54);
       }
     }
