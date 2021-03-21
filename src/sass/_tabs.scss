@@ -20,7 +20,7 @@
       height: 1px;
       background-color: $border-color;
 
-      @media (min-width: $screen-md) {
+      @include media-breakpoint-up(md){
         display: block;
       }
     }
@@ -36,7 +36,7 @@
     border: 1px solid $border-color;
     color: $text-color-muted;
 
-    @media (min-width: $screen-md) {
+    @include media-breakpoint-up(md){
       margin: 0;
 
       &:not(:last-child) {
@@ -47,7 +47,7 @@
     &--active {
       color: $text-color;
 
-      @media (min-width: $screen-md) {
+      @include media-breakpoint-up(md){
         border-bottom: 1px solid transparent;
       }
 
@@ -75,7 +75,7 @@
     border: 1px solid $border-color;
     padding: $field-padding-vertical $field-padding-horizontal;
 
-    @media (min-width: $screen-md) {
+    @include media-breakpoint-up(md){
       border-top: none;
     }
   }

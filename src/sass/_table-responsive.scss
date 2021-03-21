@@ -15,7 +15,7 @@
     line-height: 1em;
     color: $text-color-muted;
 
-    @media (max-width: ($screen-md - 1)) {
+    @include media-breakpoint-down(md) {
       display: block;
       margin-top: 1em;
       margin-bottom: 0.5em;
@@ -44,7 +44,7 @@
     text-align: inherit;
   }
 
-  @media (max-width: ($screen-md - 1)) {
+  @include media-breakpoint-down(md) {
     display: block;
     border: 0;
 

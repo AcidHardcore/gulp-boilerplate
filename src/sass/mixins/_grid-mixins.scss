@@ -40,7 +40,7 @@ $grid-gutter-width: 30px !default;
     padding-right: ($xs-grid-gutter / 2);
   }
 
-  @media (min-width: $screen-sm) {
+  @include media-breakpoint-up(sm) {
     width: $container-sm;
 
     @if ($sm-grid-gutter != $xs-grid-gutter) {
@@ -49,7 +49,7 @@ $grid-gutter-width: 30px !default;
     }
   }
 
-  @media (min-width: $screen-md) {
+  @include media-breakpoint-up(md) {
     width: $container-md;
 
     @if ($md-grid-gutter != $sm-grid-gutter) {
@@ -58,7 +58,7 @@ $grid-gutter-width: 30px !default;
     }
   }
 
-  @media (min-width: $screen-lg) {
+  @include media-breakpoint-up(lg) {
     width: $container-lg;
 
     @if ($lg-grid-gutter != $md-grid-gutter) {
@@ -67,7 +67,7 @@ $grid-gutter-width: 30px !default;
     }
   }
 
-  @media (min-width: $screen-xl) {
+  @include media-breakpoint-up(xl) {
     width: $container-xl;
 
     @if ($xl-grid-gutter != $lg-grid-gutter) {
@@ -76,21 +76,12 @@ $grid-gutter-width: 30px !default;
     }
   }
 
-  @media (min-width: $screen-xxl) {
+  @include media-breakpoint-up(xxl) {
     width: $container-xxl;
 
     @if ($xxl-grid-gutter != $xl-grid-gutter) {
       padding-left: ($xxl-grid-gutter / 2);
       padding-right: ($xxl-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-xxxl) {
-    width: $container-xxxl;
-
-    @if ($xxxl-grid-gutter != $xxl-grid-gutter) {
-      padding-left: ($xxxl-grid-gutter / 2);
-      padding-right: ($xxxl-grid-gutter / 2);
     }
   }
 }
@@ -144,7 +135,7 @@ $grid-gutter-width: 30px !default;
 
   @if ($sm-grid-gutter != $xs-grid-gutter) {
 
-    @media (min-width: $screen-sm) {
+    @include media-breakpoint-up(sm) {
       margin-left: ($sm-grid-gutter / -2);
       margin-right: ($sm-grid-gutter / -2);
     }
@@ -152,7 +143,7 @@ $grid-gutter-width: 30px !default;
 
   @if ($md-grid-gutter != $sm-grid-gutter) {
 
-    @media (min-width: $screen-md) {
+    @include media-breakpoint-up(md) {
       margin-left: ($md-grid-gutter / -2);
       margin-right: ($md-grid-gutter / -2);
     }
@@ -160,7 +151,7 @@ $grid-gutter-width: 30px !default;
 
   @if ($lg-grid-gutter != $md-grid-gutter) {
 
-    @media (min-width: $screen-lg) {
+    @include media-breakpoint-up(lg) {
       margin-left: ($lg-grid-gutter / -2);
       margin-right: ($lg-grid-gutter / -2);
     }
@@ -168,7 +159,7 @@ $grid-gutter-width: 30px !default;
 
   @if ($xl-grid-gutter != $lg-grid-gutter) {
 
-    @media (min-width: $screen-xl) {
+    @include media-breakpoint-up(xl) {
       margin-left: ($xl-grid-gutter / -2);
       margin-right: ($xl-grid-gutter / -2);
     }
@@ -176,7 +167,7 @@ $grid-gutter-width: 30px !default;
 
   @if ($xxl-grid-gutter != $xl-grid-gutter) {
 
-    @media (min-width: $screen-xxl) {
+    @include media-breakpoint-up(xxl) {
       margin-left: ($xxl-grid-gutter / -2);
       margin-right: ($xxl-grid-gutter / -2);
     }
