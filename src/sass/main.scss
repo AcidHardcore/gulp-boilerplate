@@ -2,6 +2,8 @@
 @import "fonts";
 @import "mixins/mixins";
 @import "normilize";
+//https://github.com/twbs/rfs/tree/main
+@import "../../node_modules/rfs/scss";
 @import "typo";
 @import "page";
 @import "page-header";

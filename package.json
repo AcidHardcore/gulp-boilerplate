@@ -1,53 +1,54 @@
 {
-	"name": "project-name",
-	"version": "0.0.1",
-	"description": "A description for your project.",
-	"main": "./dist/your-main-js-file.js",
-	"author": {
-		"name": "YOUR NAME",
-		"url": "http://link-to-your-website.com"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "http://link-to-your-git-repo.com"
-	},
-	"boilerplate": {
-		"version": "2.2.6",
-		"author": "Chris Ferdinandi",
-		"url": "https://gomakethings.com",
-		"repo": "http://github.com/cferdinandi/gulp-boilerplate"
-	},
-	"browserslist": [
-		"last 2 versions",
-		"> 0.25%"
-	],
-	"devDependencies": {
-		"autoprefixer": "^10.2.5",
-		"browser-sync": "^2.26.14",
-		"css-mqpacker": "^7.0.0",
-		"cssnano": "4.1.10",
-		"del": "3.0.0",
-		"gulp": "4.0.2",
-		"gulp-concat": "2.6.1",
-		"gulp-flatmap": "1.0.2",
-		"gulp-header": "2.0.5",
-		"gulp-imagemin": "^7.1.0",
-		"gulp-jshint": "2.1.0",
-		"gulp-optimize-js": "1.1.0",
-		"gulp-postcss": "^9.0.0",
-		"gulp-rename": "1.4.0",
-		"gulp-sass": "^4.1.0",
-		"gulp-svgmin": "^3.0.0",
-		"gulp-svgstore": "^7.0.1",
-		"gulp-terser": "^2.0.1",
-		"jshint": "^2.12.0",
-		"jshint-stylish": "2.2.1",
-		"lazypipe": "^1.0.2",
-		"node-sass": "^5.0.0",
-		"postcss-inline-svg": "^5.0.0"
-	},
-	"dependencies": {
-		"normalize.css": "^8.0.1"
-	}
+  "name": "project-name",
+  "version": "0.0.1",
+  "description": "A description for your project.",
+  "main": "./dist/your-main-js-file.js",
+  "author": {
+    "name": "YOUR NAME",
+    "url": "http://link-to-your-website.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://link-to-your-git-repo.com"
+  },
+  "boilerplate": {
+    "version": "2.2.6",
+    "author": "Chris Ferdinandi",
+    "url": "https://gomakethings.com",
+    "repo": "http://github.com/cferdinandi/gulp-boilerplate"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.25%"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "4.1.10",
+    "del": "3.0.0",
+    "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-flatmap": "1.0.2",
+    "gulp-header": "2.0.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "2.1.0",
+    "gulp-optimize-js": "1.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.0.1",
+    "jshint": "^2.12.0",
+    "jshint-stylish": "2.2.1",
+    "lazypipe": "^1.0.2",
+    "node-sass": "^5.0.0",
+    "postcss-inline-svg": "^5.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "rfs": "^9.0.3"
+  }
 }
