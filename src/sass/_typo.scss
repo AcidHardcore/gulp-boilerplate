@@ -182,8 +182,8 @@ blockquote,
 pre,
 address,
 figure {
-  margin-top: 0;
-  margin-bottom: $typo-margin-vertical;
+  margin-top: $typo-margin-vertical;
+  margin-bottom: 0;
 }
 
 p {
@@ -201,7 +201,8 @@ address {
 
 ul,
 ol {
-  margin-bottom: $typo-margin-vertical;
+  margin-top: $typo-margin-vertical;
+  margin-bottom: 0;
   padding-left: 1.5em;
 
   ul,
