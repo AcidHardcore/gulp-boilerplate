@@ -45,7 +45,7 @@
     "jshint-stylish": "2.2.1",
     "lazypipe": "^1.0.2",
     "node-sass": "^5.0.0",
-    "postcss-inline-svg": "^5.0.0"
+    "postcss-inline-svg": "^4.1.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
