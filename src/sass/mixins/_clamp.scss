@@ -11,7 +11,7 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     $slope : strip-unit($max-font-size - $min-font-size) / strip-unit($max-vw - $min-vw);
     $yAxisIntersection : -(strip-unit($min-vw)) * $slope + strip-unit($min-font-size);
-    @return clamp(#{$min-font-size}, #{$yAxisIntersection}rem + #{$slope * 100}vw, $max-font-size);
+    @return clamp(#{$min-font-size}, #{$yAxisIntersection}rem + #{$slope * 100}vw, #{$max-font-size});
   }
 }
 
