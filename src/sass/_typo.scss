@@ -35,9 +35,7 @@ body {
   min-height: 100%;
   word-break: break-word;
   font-family: $font-family;
-  //font-size: $font-size;
-  @include fluid-type($font-scale-start, $font-scale-end, $font-size-mobile, $font-size);
- // @include font-size(1.25rem);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-mobile, $font-size);
   line-height: $line-height;
   text-align: left;
   color: $text-color;
@@ -151,34 +149,27 @@ h6 {
 }
 
 h1 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h1-mobile, $font-size-h1);
-  @include font-size($font-size-h1);
-  margin-top: clamp-slope($font-scale-start, $font-scale-end, $font-size-h1-mobile, $font-size-h1 );
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h1-mobile, $font-size-h1);
 }
 
 h2 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h2-mobile, $font-size-h2 );
-  @include font-size($font-size-h2);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h2-mobile, $font-size-h2 );
 }
 
 h3 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h3-mobile, $font-size-h3 );
-  @include font-size($font-size-h3);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h3-mobile, $font-size-h3 );
 }
 
 h4 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h4-mobile, $font-size-h4);
-  @include font-size($font-size-h4);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h4-mobile, $font-size-h4);
 }
 
 h5 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h5-mobile, $font-size-h5 );
-  @include font-size($font-size-h5);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h5-mobile, $font-size-h5 );
 }
 
 h6 {
-  //@include fluid-type($font-scale-start, $font-scale-end, $font-size-h6-mobile, $font-size-h6);
-  @include font-size($font-size-h6);
+  font-size: clamp-slope($font-scale-start, $font-scale-end, $font-size-h6-mobile, $font-size-h6);
 }
 
 p,
@@ -224,21 +215,21 @@ li {
   line-height: inherit;
 }
 
- dt {
-   font-weight: 700;
- }
+dt {
+  font-weight: 700;
+}
 
- dd {
-   margin-left: 0;
+dd {
+  margin-left: 0;
 
-   @include media-breakpoint-up(sm) {
-     margin-left: 1.5rem;
-   }
+  @include media-breakpoint-up(sm) {
+    margin-left: 1.5rem;
+  }
 
-   & + dt {
-     margin-top: ($line-height / 2);
-   }
- }
+  & + dt {
+    margin-top: ($line-height / 2);
+  }
+}
 
 .small,
 small {

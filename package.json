@@ -49,6 +49,5 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "rfs": "^9.0.3"
   }
 }
