@@ -61,10 +61,10 @@ var paths = {
 var banner = {
   main:
     '/*!' +
-    ' <%= package.name %> v<%= package.version %>' +
-    ' | (c) ' + new Date().getFullYear() + ' <%= package.author.name %>' +
-    ' | <%= package.license %> License' +
-    ' | <%= package.repository.url %>' +
+    ' <%= pkg.name %> v<%= pkg.version %>' +
+    ' | (c) ' + new Date().getFullYear() + ' <%= pkg.author.name %>' +
+    ' | <%= pkg.license %> License' +
+    ' | <%= pkg.repository.url %>' +
     ' */\n'
 };
 
@@ -80,7 +80,7 @@ var flatmap = require('gulp-flatmap');
 var lazypipe = require('lazypipe');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
-var package = require('./package.json');
+var pkg = require('./package.json');
 
 // Scripts
 var jshint = require('gulp-jshint');
@@ -130,13 +130,13 @@ var cleanDist = function (done) {
 
 // Repeated JavaScript tasks
 var jsTasks = lazypipe()
-  .pipe(header, banner.main, {package: package})
+  .pipe(header, banner.main, {pkg: pkg})
   .pipe(optimizejs)
   .pipe(dest, paths.scripts.output)
   .pipe(rename, {suffix: '.min'})
   .pipe(uglify)
   .pipe(optimizejs)
-  .pipe(header, banner.main, {package: package})
+  .pipe(header, banner.main, {pkg: pkg})
   .pipe(dest, paths.scripts.output);
 
 // Lint, minify, and concatenate scripts
@@ -220,7 +220,7 @@ var buildStyles = function (done) {
       }),
       inlineSVG()
     ]))
-    .pipe(header(banner.main, {package: package}))
+    .pipe(header(banner.main, {pkg: pkg}))
     .pipe(dest(paths.styles.output))
     .pipe(rename({suffix: '.min'}))
     .pipe(postcss([
