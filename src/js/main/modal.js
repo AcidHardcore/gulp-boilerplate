@@ -22,21 +22,34 @@
         }
     };
 
+    function stopScrolling() {
+        document.body.style.overflow = "hidden";
+        document.body.style.height = "100%";
+    }
+
+    function resumeScrolling() {
+        document.body.style.overflow = "auto";
+        document.body.style.height = "auto";
+    }
+
     btn.addEventListener('click', function (e) {
         e.preventDefault();
         modal.classList.add('modal__show');
+        stopScrolling();
     });
 
     close.addEventListener('click', function (e) {
         e.preventDefault();
         modal.classList.remove('modal__show');
         stopVideo(modal);
+        resumeScrolling();
     });
 
     window.addEventListener('click', function (e) {
         if (e.target === modal) {
             modal.classList.remove('modal__show');
             stopVideo(modal);
+            resumeScrolling();
         }
     });
 
