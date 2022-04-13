@@ -102,7 +102,6 @@ const svgmin = require('gulp-svgmin');
 const svgstore = require('gulp-svgstore');
 
 //Images
-// import imagemin from 'gulp-imagemin';
 let imagemin = require('gulp-imagemin');
 
 // BrowserSync
