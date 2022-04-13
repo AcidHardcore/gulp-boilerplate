@@ -1,5 +1,6 @@
+@use "sass:math";
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
 }
 
 @function clamp-slope($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -9,7 +10,7 @@
   $u4: unit($max-font-size);
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    $slope : strip-unit($max-font-size - $min-font-size) / strip-unit($max-vw - $min-vw);
+    $slope : math.div(strip-unit($max-font-size - $min-font-size), strip-unit($max-vw - $min-vw));
     $yAxisIntersection : -(strip-unit($min-vw)) * $slope + strip-unit($min-font-size);
     @return clamp(#{$min-font-size}, #{$yAxisIntersection}rem + #{$slope * 100}vw, #{$max-font-size});
   }

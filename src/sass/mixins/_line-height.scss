@@ -1,3 +1,4 @@
+@use "sass:math";
 @function lh($lh, $fz) {
-  @return $lh/$fz;
+  @return math.div($lh,$fz);
 }

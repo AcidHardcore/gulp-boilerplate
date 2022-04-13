@@ -3,7 +3,7 @@
  * Turn on/off build features
  */
 
-var settings = {
+let settings = {
   clean: true,
   scripts: true,
   libs: true,
@@ -21,7 +21,7 @@ var settings = {
  * Paths to project folders
  */
 
-var paths = {
+let paths = {
   input: 'src/',
   output: 'dist/',
   scripts: {
@@ -58,7 +58,7 @@ var paths = {
  * Template for banner to add to file headers
  */
 
-var banner = {
+let banner = {
   main:
     '/*!' +
     ' <%= pkg.name %> v<%= pkg.version %>' +
@@ -74,38 +74,39 @@ var banner = {
  */
 
 // General
-var {gulp, src, dest, watch, series, parallel} = require('gulp');
-var del = require('del');
-var flatmap = require('gulp-flatmap');
-var lazypipe = require('lazypipe');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
-var pkg = require('./package.json');
+const {gulp, src, dest, watch, series, parallel} = require('gulp');
+const del = require('del');
+const flatmap = require('gulp-flatmap');
+const lazypipe = require('lazypipe');
+const rename = require('gulp-rename');
+const header = require('gulp-header');
+const pkg = require('./package.json');
 
 // Scripts
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var concat = require('gulp-concat');
-var uglify = require('gulp-terser');
-var optimizejs = require('gulp-optimize-js');
+const jshint = require('gulp-jshint');
+const stylish = require('jshint-stylish');
+const concat = require('gulp-concat');
+const uglify = require('gulp-terser');
+const optimizejs = require('gulp-optimize-js');
 
 // Styles
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var prefix = require('autoprefixer');
-var minify = require('cssnano');
-var mqpacker = require("css-mqpacker");
-var inlineSVG = require('postcss-inline-svg');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const prefix = require('autoprefixer');
+const minify = require('cssnano');
+const mqpacker = require("css-mqpacker");
+const inlineSVG = require('postcss-inline-svg');
 
 // SVGs
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
 
 //Images
-var imagemin = require('gulp-imagemin');
+// import imagemin from 'gulp-imagemin';
+let imagemin = require('gulp-imagemin');
 
 // BrowserSync
-var browserSync = require('browser-sync');
+const browserSync = require('browser-sync');
 
 
 /**
@@ -113,7 +114,7 @@ var browserSync = require('browser-sync');
  */
 
 // Remove pre-existing content from output folders
-var cleanDist = function (done) {
+let cleanDist = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.clean) return done();
@@ -129,7 +130,7 @@ var cleanDist = function (done) {
 };
 
 // Repeated JavaScript tasks
-var jsTasks = lazypipe()
+let jsTasks = lazypipe()
   .pipe(header, banner.main, {pkg: pkg})
   .pipe(optimizejs)
   .pipe(dest, paths.scripts.output)
@@ -140,7 +141,7 @@ var jsTasks = lazypipe()
   .pipe(dest, paths.scripts.output);
 
 // Lint, minify, and concatenate scripts
-var buildScripts = function (done) {
+let buildScripts = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.scripts) return done();
@@ -152,8 +153,8 @@ var buildScripts = function (done) {
       // If the file is a directory
       if (file.isDirectory()) {
 
-        // Setup a suffix variable
-        var suffix = '';
+        // Setup a suffix letiable
+        let suffix = '';
 
         // If separate polyfill files enabled
         if (settings.polyfills) {
@@ -186,7 +187,7 @@ var buildScripts = function (done) {
 };
 
 // Lint scripts
-var lintScripts = function (done) {
+let lintScripts = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.scripts) return done();
@@ -199,7 +200,7 @@ var lintScripts = function (done) {
 };
 
 // Process, lint, and minify Sass files
-var buildStyles = function (done) {
+let buildStyles = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.styles) return done();
@@ -233,7 +234,7 @@ var buildStyles = function (done) {
 };
 
 // Optimize SVG files
-var buildSVGs = function (done) {
+let buildSVGs = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.svgs) return done();
@@ -246,7 +247,7 @@ var buildSVGs = function (done) {
 };
 
 //make SVG sprite
-var svgSprite =  function (done) {
+let svgSprite =  function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.sprite) return done();
@@ -267,7 +268,7 @@ var svgSprite =  function (done) {
 };
 
 // Copy static files into output folder
-var images = function (done) {
+let images = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.images) return done();
@@ -283,7 +284,7 @@ var images = function (done) {
 
 };
 
-var copyFiles = function (done) {
+let copyFiles = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.copy) return done();
@@ -294,7 +295,7 @@ var copyFiles = function (done) {
 
 };
 
-var copyJSLibs = function (done) {
+let copyJSLibs = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.libs) return done();
@@ -306,7 +307,7 @@ var copyJSLibs = function (done) {
 };
 
 // Watch for changes to the src directory
-var startServer = function (done) {
+let startServer = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.reload) return done();
@@ -324,14 +325,14 @@ var startServer = function (done) {
 };
 
 // Reload the browser when files change
-var reloadBrowser = function (done) {
+let reloadBrowser = function (done) {
   if (!settings.reload) return done();
   browserSync.reload();
   done();
 };
 
 // Watch for changes
-var watchSource = function (done) {
+let watchSource = function (done) {
   watch(paths.scripts.watchPath, series(exports.scripts, reloadBrowser));
   watch(paths.libs.input, series(exports.copyJSLibs, reloadBrowser));
   watch(paths.styles.input, series(exports.styles, reloadBrowser));
